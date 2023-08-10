@@ -1,15 +1,23 @@
 REQUIREMENTS
 ● Larave 6.x or latest
+
 ● MySQL or MariaDB
+
 ● Postman collection of API requests (Optional when a simple frontend is provided)
-● A Git Repository of the source code (share it with developer@lay-bare.com)
+
+● A Git Repository of the source code.
 
 
 EXERCISE DESCRIPTION
+
 This is a 4 to 8 hours Laravel exercise. The main focus of this exercise is to gauge your
+
 backend web API service development and database design skills. You can provide a simple
+
 frontend design or share a Postman collection of API requests to test your work. The API must
+
 have the following in the response:
+
 ● status_code - Must be the same as the HTTP response status codes of the resulting
 request
 ● message - The response message. Can also be a validation error message.
