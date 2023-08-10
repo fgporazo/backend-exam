@@ -1,66 +1,104 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+REQUIREMENTS
+● Larave 6.x or latest
+● MySQL or MariaDB
+● Postman collection of API requests (Optional when a simple frontend is provided)
+● A Git Repository of the source code (share it with developer@lay-bare.com)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+EXERCISE DESCRIPTION
+This is a 4 to 8 hours Laravel exercise. The main focus of this exercise is to gauge your
+backend web API service development and database design skills. You can provide a simple
+frontend design or share a Postman collection of API requests to test your work. The API must
+have the following in the response:
+● status_code - Must be the same as the HTTP response status codes of the resulting
+request
+● message - The response message. Can also be a validation error message.
+● data - An array of records based on the requested results
+● meta - The pagination details
+○ total - Total records found
+○ count - The current total records shown per page
+○ per_page - The maximum records per page
+○ current_page - The current page number
+○ total_pages - The total pages available based on the provided per_page
+value
+○ links - Optional.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+OUTPUT:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<img width="1231" alt="image" src="https://github.com/fgporazo/backend-exam/assets/66890979/adee14ce-0fce-46ef-9359-67551e98c227">
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+EXERCISE DETAILS
+Create a web application that will list products from all available categories. In the list, include
+the product’s thumbnail and details. If no product thumbnail is available, show a default product
+image. Add a sorting and filtering options that will allow users to sort the list by its product name
+alphabetically in ascending or descending order and filter the list by product category.
+Below are the required modules:
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+● Dashboard (Landing Page)
+○ List all active products showing its thumbnail image (if available) and the name of
+the product from all categories.
+○ The list should be paginated.
+○ Show the product details with full description when a product from the list is
+clicked.
+○ Add a category filter that will list products based on the selected category. By
+default, the selected filter should be “Show All”, which is a pseudo-category to list
+all products from all categories.
+○ Add a sort filter that will sort the list by its product name in ascending or
+descending order.
+○ (Optional) Add a search filter.
+○ Soft-deleted products should not be visible in the list.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+OUTPUT:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<img width="1372" alt="image" src="https://github.com/fgporazo/backend-exam/assets/66890979/e3b8d5a8-048d-4c69-9030-8afadc8cc5b1">
 
-## Laravel Sponsors
+<img width="1374" alt="image" src="https://github.com/fgporazo/backend-exam/assets/66890979/57bb7360-e13c-44f9-b638-da8e41aec129">
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+● User Manager
+○ List existing users sorted alphabetically by first name and last name in ascending
+order.
+○ Add / edit user with the following details:
+(Note: username and email address must be unique)
+■ Username
+■ First Name
+■ Middle Name
+■ Last Name
+■ Email Address
+■ Password
+○ Add validator for each input.
+○ Delete user record using soft-deletion method.
+● Category Manager
+○ List existing categories sorted alphabetically in ascending order.
+○ Add / edit category with the following details:
+(Note: category name must be unique)
+■ Category Name
+■ Category Description
+■ Product Manager
+○ Add basic validation.
+○ Delete category record using soft-deletion method.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+OUTPUT:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<img width="1354" alt="image" src="https://github.com/fgporazo/backend-exam/assets/66890979/a2c408f8-67bd-4646-8e4e-d20baa63a291">
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+● Product Manager
+○ List existing products, with thumbnail image, sorted by last updated or added in
+descending order.
+○ Add new or edit exiting products with the following details:
+(Note: There’s no restriction if product name already existed as long as it has its
+own unique id and SKU)
+■ Product Name
+■ Product SKU
+■ Product Category
+■ Product Description
+■ Product Image (Allow image upload)
+○ Delete product record using soft-deletion method
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+<img width="1380" alt="image" src="https://github.com/fgporazo/backend-exam/assets/66890979/4e183dbe-b318-46d0-addd-92d799d7fb6b">
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
