@@ -45,9 +45,7 @@
     @include('livewire.products.components.create-details')
     @include('livewire.products.components.view-details')
 </div>
-<x-commons.swal id="delete-data">
-    <x-slot:title>Are you sure you want to remove this data?</x-slot:title>
-</x-commons.swal>
+
 @push('scripts')
     <script>
         $('tr').on('click', function(e){

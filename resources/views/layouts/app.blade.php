@@ -54,9 +54,25 @@
      <script src="{{asset('assets/js/sidebar.js')}}"></script>
     <script src="{{asset('assets/js/table.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
-    <x-commons.swal id="delete-data">
-        <x-slot:title>Are you sure you want to remove this data?<x-slot:title>
-    </x-commons.swal>
+    <template id="delete-data">
+        <swal-title>
+            Are you sure you want to remove this data?
+        </swal-title>
+        <swal-icon type="warning" color="red"></swal-icon>
+        <swal-button type="confirm">
+           Yes
+        </swal-button>
+        <swal-button type="cancel">
+            Cancel
+        </swal-button>
+        <swal-param name="allowEscapeKey" value="false" />
+        <swal-param
+            name="customClass"
+            value='{ "popup": "my-popup" }' />
+        <swal-function-param
+            name="didOpen"
+            value="popup => console.log(popup)" />
+        </template>
     <script>
          // delete item
          $(document).on('click','.remove-data',function(e) {

@@ -39,9 +39,7 @@
     @include('livewire.category.components.create-details')
     @include('livewire.category.components.update-details')
 </div>
-<x-commons.swal id="delete-data">
-    <x-slot:title>Are you sure you want to remove this data?</x-slot:title>
-</x-commons.swal>
+
 @push('scripts')
    <script>
     window.livewire.on('store', () => {
