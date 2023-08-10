@@ -1,4 +1,17 @@
+-----INSTALLATION-----
+
+1. Follow the steps: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+2. Setup local environment --->  .env file and database
+3. run this command ---> "php artisan migrate:fresh --seed"
+
+
+###
+
+
+----ABOUT THE PROJECT----
+
 REQUIREMENTS
+
 ● Larave 6.x or latest
 
 ● MySQL or MariaDB
