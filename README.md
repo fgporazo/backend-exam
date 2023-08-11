@@ -1,8 +1,14 @@
 -----INSTALLATION-----
 
-1. Follow the steps: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
-2. Setup local environment --->  .env file and database
-3. run this command ---> "php artisan migrate:fresh --seed"
+1. Follow the steps here: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+or clone the project and run this command in your chosen folder --> "git clone https://github.com/fgporazo/backend-exam.git"
+2. Locate the path folder project and run this command ---> "composer install"
+3. Setup local environment --->  .env file and database
+4. Run the following commands:
+     ---> "php artisan storage:link" 
+           create a  folder name "img" inside "storage" folder.
+     ---> "php artisan migrate:fresh --seed"
+     ---> "php artisan serve"
 
 
 ###
