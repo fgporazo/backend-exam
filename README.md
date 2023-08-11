@@ -14,8 +14,11 @@ or clone the project and run this command in your chosen folder --> "git clone h
 REST API:
 1. Go to the application link:
 <img width="1077" alt="image" src="https://github.com/fgporazo/backend-exam/assets/66890979/774b2fbd-abad-438d-b1e8-cd3dddf4b3f7">
+
 Local url: http://127.0.0.1:8000/
+
 Endpoint: api/v1/products
+
 
 
 ###
