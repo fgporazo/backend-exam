@@ -11,6 +11,8 @@ use DB;
 class Products extends Component
 {
     use WithPagination, WithFileUploads;
+    
+    
 
     public $filter_category = null;
     public $filter_orderBy = 'desc';
@@ -74,13 +76,16 @@ class Products extends Component
             
         ]);
 
-
+        $path = '';
+        if($validated['image']){
+            $path = $validated['image']->store('img', 'public');
+        }
 
         try{
           
             $category = new Product;
 
-            $category->image = '123';
+            $category->image = str_replace('img/','',$path);
             $category->name =  $validated['name'];
             $category->product_category_id =  $validated['product_category_id'];
             $category->description =  $validated['description'];

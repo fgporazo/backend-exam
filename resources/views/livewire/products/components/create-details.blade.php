@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div wire:ignore class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -12,7 +12,7 @@
       <div class="modal-body">
             <div class="mb-3">
                 <label for="image" class="form-label">Product Image</label>
-                <input wire:model="image" type="file" class="form-control" id="image" placeholder="">
+                <input wire:model="image" type="file" class="form-control" id="image" />
                 @error('image') <span class="text-danger">{{ $message }}</span>@enderror
             </div>
             <div class="mb-3" >

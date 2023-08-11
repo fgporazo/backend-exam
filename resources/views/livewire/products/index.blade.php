@@ -29,7 +29,7 @@
                 <tr wire:click="viewDetails('{{$product->id}}')" role="button">
                     <td>{{ $key + $products->firstItem() }}</td>
                     <td>{{ $product->sku }}</td>
-                    <td><img src="{{asset('assets/img/'.$product->image)}}" width="50"></td>
+                    <td><img src="{{asset('storage/img/'.$product->image)}}" width="50"></td>
                     <td>{{$product->name}}</td>
                     <!-- <td>{{$product->description}}</td> -->
                     <td>{{$product->category->name}}</td>
