@@ -16,7 +16,7 @@ class Products extends Component
 
     public $filter_category = null;
     public $filter_orderBy = 'desc';
-    public $image, $name, $description,$product_category_id;
+    public $sku,$image, $name, $description,$product_category_id;
     protected $listeners = [
         'deleteData'
     ];
@@ -34,8 +34,11 @@ class Products extends Component
     }
 
     public function viewDetails($id){
+        $this->resetInputFields();
+        
         $productDetails = Product::findOrFail($id);
 
+        $this->sku = $productDetails->sku;
         $this->image = $productDetails->image;
         $this->name = $productDetails->name;
         $this->product_category_id = $productDetails->product_category_id;

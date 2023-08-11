@@ -9,7 +9,7 @@
       <div class="modal-body">
         <div class="card">
             @if($image)
-            <img src="{{asset('storage/'.$product->image)}}" class="card-img-top" alt="...">
+            <img src="{{asset('storage/img/'.$image)}}" class="card-img-top" alt="...">
             @endif
             <div class="card-body">
                 <h5 class="card-title">{{$name}}</h5>
