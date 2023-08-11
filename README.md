@@ -1,5 +1,6 @@
 -----INSTALLATION-----
 
+WEB:
 1. Follow the steps here: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 or clone the project and run this command in your chosen folder --> "git clone https://github.com/fgporazo/backend-exam.git"
 2. Locate the path folder project and run this command ---> "composer install"
@@ -9,6 +10,12 @@ or clone the project and run this command in your chosen folder --> "git clone h
            create a  folder name "img" inside "storage" folder.
      ---> "php artisan migrate:fresh --seed"
      ---> "php artisan serve"
+
+REST API:
+1. Go to the application link:
+<img width="1077" alt="image" src="https://github.com/fgporazo/backend-exam/assets/66890979/774b2fbd-abad-438d-b1e8-cd3dddf4b3f7">
+Local url: http://127.0.0.1:8000/
+Endpoint: api/v1/products
 
 
 ###
